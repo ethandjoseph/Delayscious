@@ -7,6 +7,6 @@
 JUCE 8 project consisting of
 1. [FeedbackDelay](https://github.com/ethandjoseph/Delayscious/blob/main/Source/FeedbackDelay.cpp)
 
-## [Release](https://github.com/ethandjoseph/Bandpass-Filter/releases)
+## [Release](https://github.com/ethandjoseph/Delayscious/releases)
 - VST3
 - 64 bit
