@@ -9,10 +9,15 @@ DelayciousAudioProcessorEditor::DelayciousAudioProcessorEditor (DelayciousAudioP
 	drySlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
 	wetSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
 
-	delayTimeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 50, 20);
-	feedbackSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 50, 20);
-	drySlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 50, 20);
-	wetSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 50, 20);
+	delayTimeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
+	feedbackSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
+	drySlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
+	wetSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
+
+	delayTimeSlider.setTextValueSuffix(" ms");
+	feedbackSlider.setTextValueSuffix(" %");
+	//drySlider.setTextValueSuffix(" dB");
+	//wetSlider.setTextValueSuffix(" dB");
 
 	delayTimeLabel.setText("Delay Time", juce::dontSendNotification);
 	feedbackLabel.setText("Feedback", juce::dontSendNotification);
@@ -39,7 +44,7 @@ DelayciousAudioProcessorEditor::DelayciousAudioProcessorEditor (DelayciousAudioP
 	dryAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "DRY", drySlider);
 	wetAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "WET", wetSlider);
 
-    setSize (400, 200);
+    setSize (600, 220);
 }
 
 DelayciousAudioProcessorEditor::~DelayciousAudioProcessorEditor()
@@ -48,15 +53,15 @@ DelayciousAudioProcessorEditor::~DelayciousAudioProcessorEditor()
 
 void DelayciousAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+	g.fillAll(juce::Colours::darkred);
 }
 
 void DelayciousAudioProcessorEditor::resized()
 {
-	auto area = getLocalBounds().reduced(20);
+	auto area = getLocalBounds().reduced(32);
 	auto sliderWidth = area.getWidth() / 4;
-	delayTimeSlider.setBounds(area.removeFromLeft(sliderWidth));
-	feedbackSlider.setBounds(area.removeFromLeft(sliderWidth));
-	drySlider.setBounds(area.removeFromLeft(sliderWidth));
-	wetSlider.setBounds(area.removeFromLeft(sliderWidth));
+	delayTimeSlider.setBounds(area.removeFromLeft(sliderWidth).reduced(8));
+	feedbackSlider.setBounds(area.removeFromLeft(sliderWidth).reduced(8));
+	drySlider.setBounds(area.removeFromLeft(sliderWidth).reduced(8));
+	wetSlider.setBounds(area.removeFromLeft(sliderWidth).reduced(8));
 }
