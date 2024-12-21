@@ -166,8 +166,8 @@ juce::AudioProcessorValueTreeState::ParameterLayout DelayciousAudioProcessor::cr
 	params.push_back(std::make_unique<juce::AudioParameterFloat>("FEEDBACK", "Feedback", 0.0f, 1.0f, 0.4f));
     //params.push_back(std::make_unique<juce::AudioParameterFloat>("DRY", "Dry", juce::NormalisableRange<float>(-60.0f, 0.0f, 0.1f, 0.8f, false), 100.0f));
     //params.push_back(std::make_unique<juce::AudioParameterFloat>("WET", "Wet", juce::NormalisableRange<float>(-60.0f, 0.0f, 0.1f, 0.8f, false), 100.0f));
-	params.push_back(std::make_unique<juce::AudioParameterFloat>("DRY", "Dry", 0.0f, 1.0f, 1.0f));
-    params.push_back(std::make_unique<juce::AudioParameterFloat>("WET", "Wet", 0.0f, 1.0f, 0.5f));
+	params.push_back(std::make_unique<juce::AudioParameterFloat>("DRY", "Dry", 0.0f, 100.0f, 100.0f));
+    params.push_back(std::make_unique<juce::AudioParameterFloat>("WET", "Wet", 0.0f, 100.0f, 50.0f));
 	return { params.begin(), params.end() };
 }
 

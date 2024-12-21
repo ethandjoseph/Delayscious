@@ -33,8 +33,8 @@ void FeedbackDelay::setParameters(float newDelayTime, float newFeedback, float n
 	fbRight = newFeedback;
 	//dry = juce::Decibels::decibelsToGain(newDry);
 	//wet = juce::Decibels::decibelsToGain(newWet);
-	dry = newDry;
-	wet = newWet;
+	dry = newDry/100.0f;
+	wet = newWet/100.0f;
 }
 
 void FeedbackDelay::fillBuffer(juce::AudioBuffer<float>& buffer, int channel)

@@ -16,8 +16,8 @@ DelayciousAudioProcessorEditor::DelayciousAudioProcessorEditor (DelayciousAudioP
 
 	delayTimeSlider.setTextValueSuffix(" ms");
 	feedbackSlider.setTextValueSuffix(" %");
-	drySlider.setTextValueSuffix(" dB");
-	wetSlider.setTextValueSuffix(" dB");
+	drySlider.setTextValueSuffix(" %");
+	wetSlider.setTextValueSuffix(" %");
 
 	delayTimeLabel.setText("Delay Time", juce::dontSendNotification);
 	feedbackLabel.setText("Feedback", juce::dontSendNotification);
