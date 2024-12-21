@@ -9,15 +9,15 @@ DelayciousAudioProcessorEditor::DelayciousAudioProcessorEditor (DelayciousAudioP
 	drySlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
 	wetSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
 
-	delayTimeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
-	feedbackSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
-	drySlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
-	wetSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 50, 20);
+	delayTimeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 80, 20);
+	feedbackSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 80, 20);
+	drySlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 80, 20);
+	wetSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 80, 20);
 
 	delayTimeSlider.setTextValueSuffix(" ms");
 	feedbackSlider.setTextValueSuffix(" %");
-	//drySlider.setTextValueSuffix(" dB");
-	//wetSlider.setTextValueSuffix(" dB");
+	drySlider.setTextValueSuffix(" dB");
+	wetSlider.setTextValueSuffix(" dB");
 
 	delayTimeLabel.setText("Delay Time", juce::dontSendNotification);
 	feedbackLabel.setText("Feedback", juce::dontSendNotification);

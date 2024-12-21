@@ -162,8 +162,8 @@ void DelayciousAudioProcessor::setStateInformation (const void* data, int sizeIn
 juce::AudioProcessorValueTreeState::ParameterLayout DelayciousAudioProcessor::createParameterLayout()
 {
 	std::vector<std::unique_ptr<juce::RangedAudioParameter>> params;
-	params.push_back(std::make_unique<juce::AudioParameterFloat>("DELAY_TIME", "Delay Time", 0.0f, 2000.0f, 0.5f));
-	params.push_back(std::make_unique<juce::AudioParameterFloat>("FEEDBACK", "Feedback", 0.0f, 1.0f, 0.0f));
+	params.push_back(std::make_unique<juce::AudioParameterFloat>("DELAY_TIME", "Delay Time", 0.0f, 2000.0f, 500.f));
+	params.push_back(std::make_unique<juce::AudioParameterFloat>("FEEDBACK", "Feedback", 0.0f, 1.0f, 0.4f));
     //params.push_back(std::make_unique<juce::AudioParameterFloat>("DRY", "Dry", juce::NormalisableRange<float>(-60.0f, 0.0f, 0.1f, 0.8f, false), 100.0f));
     //params.push_back(std::make_unique<juce::AudioParameterFloat>("WET", "Wet", juce::NormalisableRange<float>(-60.0f, 0.0f, 0.1f, 0.8f, false), 100.0f));
 	params.push_back(std::make_unique<juce::AudioParameterFloat>("DRY", "Dry", 0.0f, 1.0f, 1.0f));
