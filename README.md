@@ -5,7 +5,7 @@
 
 ## Code
 JUCE 8 project consisting of
-1. [FeedbackDdelay](https://github.com/ethandjoseph/Delayscious/blob/main/Source/FeedbackDelay.cpp)
+1. [FeedbackDelay](https://github.com/ethandjoseph/Delayscious/blob/main/Source/FeedbackDelay.cpp)
 
 ## [Release](https://github.com/ethandjoseph/Bandpass-Filter/releases)
 - VST3
