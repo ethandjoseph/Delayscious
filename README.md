@@ -6,6 +6,8 @@
 ## Code
 JUCE 8 project consisting of
 1. [FeedbackDelay](https://github.com/ethandjoseph/Delayscious/blob/main/Source/FeedbackDelay.cpp)
+### Next Goal
+Modify FeedbackDelay::process() to work with channelData instead of multi-channel buffers
 
 ## [Release](https://github.com/ethandjoseph/Delayscious/releases)
 - VST3
