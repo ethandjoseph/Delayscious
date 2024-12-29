@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="f2uf8c" name="Delaycious" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildStandalone,buildVST3">
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildAAX,buildAU,buildAUv3,buildLV2,buildStandalone,buildVST3"
+              companyName="Earth Mover DSP" pluginAAXCategory="16" lv2Uri="http://earthmoverdsp.com/plugins/Delayscious">
   <MAINGROUP id="Dackdt" name="Delaycious">
     <GROUP id="{E24A2E85-5E7F-E039-D6BE-9C9F9047C585}" name="Source">
       <FILE id="o89v1p" name="FeedbackDelay.cpp" compile="1" resource="0"
