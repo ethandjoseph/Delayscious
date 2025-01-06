@@ -139,8 +139,8 @@ void FeedbackDelay::process(juce::AudioBuffer<float>& buffer)
     updateBufferPositions(wetBuffer, delayBuffer);
 
 
-	dryBuffer.applyGain(0, bufferSize, dry / 100.0f);
-	wetBuffer.applyGain(0, bufferSize, wet / 100.0f);
+	dryBuffer.applyGain(0, bufferSize, dry);
+	wetBuffer.applyGain(0, bufferSize, wet);
 
     for (int channel = 0; channel < buffer.getNumChannels(); ++channel)
     {
